@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsa5pa0nq82f"]
+
+[ext_resource type="Texture2D" uid="uid://14jwi6frv818" path="res://assets/villains/pizza_wh.png" id="1_8ghu1"]
+[ext_resource type="Script" uid="uid://ccos1slbrar5j" path="res://scripts/vilian.gd" id="1_kaahb"]
+[ext_resource type="PackedScene" uid="uid://djbf8n01s1pte" path="res://scenes/bullets/default_bullet.tscn" id="2_0y4e2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kaahb"]
+
+[node name="PizzaBig" type="Node"]
+
+[node name="pizza_big" type="Area2D" parent="."]
+position = Vector2(0, 130)
+script = ExtResource("1_kaahb")
+bullet_freq = 10
+bullet_scene = ExtResource("2_0y4e2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pizza_big"]
+shape = SubResource("RectangleShape2D_kaahb")
+
+[node name="Sprite2D" type="Sprite2D" parent="pizza_big"]
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("1_8ghu1")
+
+[node name="ShootTimer" type="Timer" parent="pizza_big"]
+process_callback = 0
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="pizza_big/ShootTimer" to="pizza_big" method="_on_shoot_timer_timeout"]
