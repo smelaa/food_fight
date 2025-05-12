@@ -1,18 +1,8 @@
-extends Area2D
+extends "res://scripts/character.gd"
 
-@export var speed = 500
-@export_range(1, 100, 1) var bullet_freq = 3
-@export var bullet_scene: PackedScene
-@export var shoot_offset = Vector2(0, 10)
+@export_range(1, 100, 1) var bullet_freq = 10
 
-var direction = Vector2.LEFT
-var screen_width = 0
 var timeout = 0
-
-func _ready():
-	screen_width = get_viewport().get_visible_rect().size.x
-
-# @onready var collision_rect: CollisionShape2D = $PlayerCollisionShape
 
 func _physics_process(delta: float) -> void:
 	var new_position_x = position.x + speed * delta * direction.x
@@ -30,8 +20,3 @@ func _on_shoot_timer_timeout() -> void:
 	if timeout == bullet_freq:
 		shoot_bullet()
 		timeout=0
-
-func shoot_bullet():
-	var bullet = bullet_scene.instantiate() as Node2D
-	bullet.position = position + shoot_offset
-	get_parent().add_child(bullet)
