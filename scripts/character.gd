@@ -7,6 +7,8 @@ signal defeated
 @export var shoot_offset = Vector2(0, 0)
 @export var max_health = 0
 @export var direction = Vector2.ZERO
+@export var bullet_speed = 500
+@export var bullet_power = 20
 
 var current_health: int
 var screen_width = 0
@@ -29,6 +31,8 @@ func move(delta: float):
 func shoot_bullet():
 	var bullet = bullet_scene.instantiate() as Node2D
 	bullet.position = position + shoot_offset
+	bullet.speed = bullet_speed
+	bullet.power = bullet_power
 	get_parent().add_child(bullet)
 
 func take_damage(amount: int):
