@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://i21slysr047c" path="res://scenes/player.tscn" id="1_o5qli"]
-[ext_resource type="Script" uid="uid://cqpiovrk28mhr" path="res://scenes/texture_rect.gd" id="2_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://dsa5pa0nq82f" path="res://scenes/vilians/pizza_big.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://d1so580l3a36l" path="res://scripts/texture_rect.gd" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://b3dxh1w82tnmq" path="res://scripts/game_manager.gd" id="5_tbgi4"]
 
 [node name="main" type="Node"]
 
@@ -24,7 +24,9 @@ z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
 offset_top = -1080.0
+offset_right = 1.0
 offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -35,4 +37,5 @@ script = ExtResource("2_jyhfs")
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 
-[node name="PizzaBig" parent="." instance=ExtResource("3_sugp2")]
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("5_tbgi4")
