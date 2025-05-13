@@ -9,6 +9,7 @@ radius = 50.0
 height = 130.0
 
 [node name="pizza_small" type="Area2D"]
+position = Vector2(960, -250)
 script = ExtResource("1_kaahb")
 speed = 500
 bullet_scene = ExtResource("2_0y4e2")

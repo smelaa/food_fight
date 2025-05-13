@@ -8,6 +8,7 @@
 radius = 102.078
 
 [node name="cookie" type="Area2D"]
+position = Vector2(960, -250)
 script = ExtResource("1_26nby")
 speed = 350
 bullet_scene = ExtResource("2_6c4i6")
