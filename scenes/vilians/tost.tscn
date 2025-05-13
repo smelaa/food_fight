@@ -8,6 +8,7 @@
 size = Vector2(144, 183)
 
 [node name="tost" type="Area2D"]
+position = Vector2(960, -250)
 script = ExtResource("1_kq1m6")
 speed = 400
 bullet_scene = ExtResource("2_17hy7")

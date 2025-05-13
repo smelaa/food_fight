@@ -8,6 +8,7 @@
 size = Vector2(107, 176.5)
 
 [node name="choco" type="Area2D"]
+position = Vector2(960, -250)
 script = ExtResource("1_4d471")
 speed = 450
 bullet_scene = ExtResource("2_qfy8i")
