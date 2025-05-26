@@ -4,6 +4,7 @@ extends "res://scripts/character.gd"
 
 var timeout = 0
 var spawned = false
+var game_manager: Node = null
 
 func _physics_process(delta: float) -> void:
 	
@@ -37,3 +38,7 @@ func _on_shoot_timer_timeout() -> void:
 	if timeout == bullet_freq:
 		shoot_bullet()
 		timeout=0
+		
+func die():
+	if game_manager:
+		game_manager.increase_score(100)

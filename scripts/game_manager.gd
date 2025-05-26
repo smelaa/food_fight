@@ -9,6 +9,8 @@ var villain_types: Array[PackedScene] = [
 ] # Assign your villain scenes in Inspector
 var current_villain: Node = null
 var current_index := 0
+var current_score := 0
+@onready var score_label: Label = $ScoreLabel
 
 func _ready():
 	spawn_next_villain()
@@ -20,10 +22,16 @@ func spawn_next_villain():
 
 	var villain_scene = villain_types[current_index]
 	current_villain = villain_scene.instantiate()
+	current_villain.game_manager = self
 	add_child(current_villain)
 
 	# Watch for its death
 	current_villain.connect("defeated", _on_villain_defeated)
+
+func increase_score(amount: int):
+	current_score += amount
+	print("Score: ", current_score)
+	score_label.text = "Score: %d" % current_score
 
 func _on_villain_defeated():
 	await get_tree().create_timer(2.0).timeout

@@ -40,7 +40,12 @@ func take_damage(amount: int):
 	update_life_bar()
 	if current_health == 0:
 		emit_signal("defeated")
+		die()
 		queue_free()
+
+
+func die():
+	pass
 
 func update_life_bar():
 	var percent = float(current_health) / max_health
