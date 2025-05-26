@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsa5pa0nq82f"]
 
 [ext_resource type="Script" uid="uid://ccos1slbrar5j" path="res://scripts/vilian.gd" id="1_kaahb"]
-[ext_resource type="PackedScene" uid="uid://djbf8n01s1pte" path="res://scenes/bullets/default_bullet.tscn" id="2_0y4e2"]
+[ext_resource type="PackedScene" uid="uid://piiu860ypvcu" path="res://scenes/bullets/salami_bullet.tscn" id="2_jy1d5"]
 [ext_resource type="Texture2D" uid="uid://dmocms2xpk2sk" path="res://assets/villains/pizza_small.png" id="3_jy1d5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jy1d5"]
@@ -12,7 +12,7 @@ height = 130.0
 position = Vector2(960, -250)
 script = ExtResource("1_kaahb")
 speed = 500
-bullet_scene = ExtResource("2_0y4e2")
+bullet_scene = ExtResource("2_jy1d5")
 shoot_offset = Vector2(0, 210)
 max_health = 70
 direction = Vector2(-1, 0)

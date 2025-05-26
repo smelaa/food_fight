@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b2dakpis71pn"]
+
+[ext_resource type="FontFile" uid="uid://chskgq700cm20" path="res://assets/ARCADECLASSIC.TTF" id="1_e1x85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e1x85"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_e1x85"]
+color = Color(0.670588, 0.133333, 0.0117647, 1)
+grow_begin = -15.0
+grow_end = -15.0
+thickness = 20
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_cjfk0"]
+color = Color(1, 1, 1, 1)
+grow_begin = -15.0
+grow_end = -15.0
+thickness = 20
+vertical = true
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_vj6dk"]
+color = Color(0.670588, 0.133333, 0.0117647, 1)
+grow_begin = -15.0
+grow_end = -15.0
+thickness = 20
+vertical = true
+
+[resource]
+default_font = ExtResource("1_e1x85")
+default_font_size = 70
+Button/colors/font_disabled_color = Color(0.128698, 0.272456, 0.627741, 1)
+Button/colors/font_pressed_color = Color(0.670588, 0.133333, 0.0117647, 1)
+Button/constants/icon_max_width = 5
+Button/styles/disabled = SubResource("StyleBoxEmpty_e1x85")
+Button/styles/hover = SubResource("StyleBoxLine_e1x85")
+Button/styles/normal = SubResource("StyleBoxLine_cjfk0")
+Button/styles/pressed = SubResource("StyleBoxLine_vj6dk")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0.670588, 0.133333, 0.0117647, 1)
+Label/constants/shadow_offset_x = 6
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+VBoxContainer/constants/separation = 46

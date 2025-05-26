@@ -1,0 +1,124 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhmjripxm1117"]
+
+[ext_resource type="Theme" uid="uid://b2dakpis71pn" path="res://theme.tres" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="2_con2f"]
+[ext_resource type="Script" uid="uid://djqgpnmf7ytpb" path="res://scripts/main_menu.gd" id="2_g3eks"]
+[ext_resource type="Script" uid="uid://d1so580l3a36l" path="res://scripts/texture_rect.gd" id="3_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://fqt4da8nfr25" path="res://assets/menu.png" id="4_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bec63quxrg2f" path="res://assets/villains/spaghetti.png" id="5_g3eks"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_right = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_yqeox")
+metadata/_edit_vertical_guides_ = [-2523.0]
+
+[node name="Background_1" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_right = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_con2f")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("3_mhnvy")
+
+[node name="Background_2" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -1080.0
+offset_right = -38.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_con2f")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("3_mhnvy")
+
+[node name="Menu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 73.0
+offset_right = 1698.0
+offset_bottom = 1006.0
+texture = ExtResource("4_4ytvr")
+
+[node name="Spaghetti" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 306.0
+offset_right = 757.0
+offset_bottom = 741.0
+texture = ExtResource("5_g3eks")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 754.0
+offset_right = 705.0
+offset_bottom = 899.0
+text = "Food 
+Invaders"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 276.0
+offset_right = 1585.0
+offset_bottom = 875.0
+script = ExtResource("2_g3eks")
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Continue
+"
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+action_mode = 0
+keep_pressed_outside = true
+text = "New Game"
+
+[node name="FightersButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Fighters"
+
+[node name="EnemiesButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Enemies
+"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Credits"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 178.0
+offset_right = 711.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 150
+text = "MENU"
