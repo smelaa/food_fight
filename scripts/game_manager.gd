@@ -1,11 +1,12 @@
 extends Node2D
 
 var villain_types: Array[PackedScene] = [
-	preload("res://scenes/vilians/tost.tscn"),
+	preload("res://scenes/vilians/spaghetti.tscn"),
 	preload("res://scenes/vilians/pizza_big.tscn"),
 	preload("res://scenes/vilians/pizza_small.tscn"),
 	preload("res://scenes/vilians/cookie.tscn"),
 	preload("res://scenes/vilians/choco.tscn"),
+	preload("res://scenes/vilians/tost.tscn"),
 ] # Assign your villain scenes in Inspector
 var current_villain: Node = null
 var current_index := 0

@@ -1,17 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3aa7vo67rdkj"]
+[gd_scene load_steps=5 format=3 uid="uid://d3jm5ecwphmue"]
 
-[ext_resource type="Script" uid="uid://ccos1slbrar5j" path="res://scripts/vilian.gd" id="1_26nby"]
-[ext_resource type="PackedScene" uid="uid://b32qy6u67asiv" path="res://scenes/bullets/choco_bullet.tscn" id="2_26nby"]
-[ext_resource type="Texture2D" uid="uid://82i116jrudsm" path="res://assets/villains/cookie.png" id="3_26nby"]
+[ext_resource type="Script" uid="uid://ccos1slbrar5j" path="res://scripts/vilian.gd" id="1_e2vi2"]
+[ext_resource type="PackedScene" uid="uid://b60jede1puueb" path="res://scenes/bullets/meatball_bullet.tscn" id="2_e2vi2"]
+[ext_resource type="Texture2D" uid="uid://bec63quxrg2f" path="res://assets/villains/spaghetti.png" id="3_e2vi2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0y4e2"]
 radius = 102.078
 
-[node name="cookie" type="Area2D"]
+[node name="spaghetti" type="Area2D"]
 position = Vector2(960, -250)
-script = ExtResource("1_26nby")
+script = ExtResource("1_e2vi2")
 speed = 350
-bullet_scene = ExtResource("2_26nby")
+bullet_scene = ExtResource("2_e2vi2")
 shoot_offset = Vector2(0, 270)
 max_health = 200
 direction = Vector2(-1, 0)
@@ -25,7 +25,7 @@ shape = SubResource("CircleShape2D_0y4e2")
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
 position = Vector2(-5, -12)
 scale = Vector2(0.22, 0.22)
-texture = ExtResource("3_26nby")
+texture = ExtResource("3_e2vi2")
 
 [node name="ShootTimer" type="Timer" parent="."]
 process_callback = 0
