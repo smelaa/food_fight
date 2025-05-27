@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://gtcyu71aca2v"]
+
+[ext_resource type="Script" uid="uid://bkxidcv1f80nl" path="res://scripts/player_menu.gd" id="1_5gqjb"]
+[ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="2_ssehr"]
+[ext_resource type="Script" uid="uid://d1so580l3a36l" path="res://scripts/texture_rect.gd" id="3_e4e68"]
+[ext_resource type="Texture2D" uid="uid://ctj8454nvtn2s" path="res://assets/icons/left.png" id="4_knbwh"]
+[ext_resource type="Texture2D" uid="uid://bkc6r1yf1obxu" path="res://assets/icons/right.png" id="5_kon28"]
+[ext_resource type="Texture2D" uid="uid://cx2wx7rix0s1l" path="res://assets/icons/home.png" id="6_l4c6i"]
+[ext_resource type="PackedScene" uid="uid://bkrvh4rfjghm1" path="res://scenes/player_menu/dragonut_menu.tscn" id="7_knbwh"]
+[ext_resource type="PackedScene" uid="uid://dr6fxux7130fd" path="res://scenes/player_menu/gnomlette_menu.tscn" id="8_kon28"]
+[ext_resource type="PackedScene" uid="uid://cbndhbg8hsbd2" path="res://scenes/player_menu/unicorn_menu.tscn" id="9_l4c6i"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_f65a3"]
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_sfm6y"]
+events = [SubResource("InputEventKey_f65a3")]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_g4t2s"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_up5b6"]
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="Shortcut_pdor4"]
+events = [SubResource("InputEventKey_up5b6")]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oay7n"]
+
+[node name="PlayerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5gqjb")
+
+[node name="Background_1" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ssehr")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("3_e4e68")
+
+[node name="Background_2" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1080.0
+offset_right = 1.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ssehr")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("3_e4e68")
+
+[node name="PreviousButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 479.0
+offset_right = 181.0
+offset_bottom = 607.0
+shortcut = SubResource("Shortcut_sfm6y")
+texture_normal = ExtResource("4_knbwh")
+texture_pressed = ExtResource("4_knbwh")
+texture_hover = ExtResource("4_knbwh")
+texture_disabled = SubResource("PlaceholderTexture2D_g4t2s")
+
+[node name="NextButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1733.0
+offset_top = 479.0
+offset_right = 1861.0
+offset_bottom = 607.0
+shortcut = SubResource("Shortcut_pdor4")
+texture_normal = ExtResource("5_kon28")
+texture_pressed = ExtResource("5_kon28")
+texture_hover = ExtResource("5_kon28")
+texture_disabled = SubResource("PlaceholderTexture2D_oay7n")
+
+[node name="BackToMenuButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 870.0
+offset_right = 182.0
+offset_bottom = 998.0
+texture_normal = ExtResource("6_l4c6i")
+texture_pressed = ExtResource("6_l4c6i")
+texture_hover = ExtResource("6_l4c6i")
+
+[node name="ScreenContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DragonutMenu" parent="ScreenContainer" instance=ExtResource("7_knbwh")]
+layout_mode = 1
+
+[node name="GnomletteMenu" parent="ScreenContainer" instance=ExtResource("8_kon28")]
+layout_mode = 1
+
+[node name="UnicornMenu" parent="ScreenContainer" instance=ExtResource("9_l4c6i")]
+layout_mode = 1

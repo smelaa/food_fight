@@ -1,0 +1,126 @@
+[gd_scene load_steps=19 format=3 uid="uid://mb5tt6s8ilnd"]
+
+[ext_resource type="Script" uid="uid://c52d5q38qst24" path="res://scripts/start_vilian_menu.gd" id="1_e4g76"]
+[ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="2_bdf3k"]
+[ext_resource type="Script" uid="uid://d1so580l3a36l" path="res://scripts/texture_rect.gd" id="3_cp775"]
+[ext_resource type="Texture2D" uid="uid://ctj8454nvtn2s" path="res://assets/icons/left.png" id="4_ci2nm"]
+[ext_resource type="Texture2D" uid="uid://bkc6r1yf1obxu" path="res://assets/icons/right.png" id="5_v85oc"]
+[ext_resource type="Texture2D" uid="uid://cx2wx7rix0s1l" path="res://assets/icons/home.png" id="6_m4obl"]
+[ext_resource type="PackedScene" uid="uid://3qs1uvukuxoq" path="res://scenes/vilian_menu/tost_menu.tscn" id="7_pfkso"]
+[ext_resource type="PackedScene" uid="uid://66nohbpoyi3y" path="res://scenes/vilian_menu/pizza_menu.tscn" id="8_pne2u"]
+[ext_resource type="PackedScene" uid="uid://cj2d6qbhhkh86" path="res://scenes/vilian_menu/pizzaslice_menu.tscn" id="9_e4dtg"]
+[ext_resource type="PackedScene" uid="uid://bgylghxxk6yg3" path="res://scenes/vilian_menu/choco_menu.tscn" id="10_h8gp1"]
+[ext_resource type="PackedScene" uid="uid://hfvskyp5wsqt" path="res://scenes/vilian_menu/cookie_menu.tscn" id="11_m4gbq"]
+[ext_resource type="PackedScene" uid="uid://cvk1u70gh5uwk" path="res://scenes/vilian_menu/spaghetti_menu.tscn" id="12_lag67"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_f65a3"]
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_5kyuu"]
+events = [SubResource("InputEventKey_f65a3")]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pakv0"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_up5b6"]
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="Shortcut_1ndg6"]
+events = [SubResource("InputEventKey_up5b6")]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ia85h"]
+
+[node name="VilianMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e4g76")
+
+[node name="Background_1" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bdf3k")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("3_cp775")
+
+[node name="Background_2" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1080.0
+offset_right = 1.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bdf3k")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("3_cp775")
+
+[node name="PreviousButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 479.0
+offset_right = 181.0
+offset_bottom = 607.0
+shortcut = SubResource("Shortcut_5kyuu")
+texture_normal = ExtResource("4_ci2nm")
+texture_pressed = ExtResource("4_ci2nm")
+texture_hover = ExtResource("4_ci2nm")
+texture_disabled = SubResource("PlaceholderTexture2D_pakv0")
+
+[node name="NextButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1733.0
+offset_top = 479.0
+offset_right = 1861.0
+offset_bottom = 607.0
+shortcut = SubResource("Shortcut_1ndg6")
+texture_normal = ExtResource("5_v85oc")
+texture_pressed = ExtResource("5_v85oc")
+texture_hover = ExtResource("5_v85oc")
+texture_disabled = SubResource("PlaceholderTexture2D_ia85h")
+
+[node name="BackToMenuButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 870.0
+offset_right = 182.0
+offset_bottom = 998.0
+texture_normal = ExtResource("6_m4obl")
+texture_pressed = ExtResource("6_m4obl")
+texture_hover = ExtResource("6_m4obl")
+
+[node name="ScreenContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TostMenu" parent="ScreenContainer" instance=ExtResource("7_pfkso")]
+layout_mode = 1
+
+[node name="PizzaMenu" parent="ScreenContainer" instance=ExtResource("8_pne2u")]
+layout_mode = 1
+
+[node name="PizzaSliceMenu" parent="ScreenContainer" instance=ExtResource("9_e4dtg")]
+layout_mode = 1
+
+[node name="ChocoMenu" parent="ScreenContainer" instance=ExtResource("10_h8gp1")]
+layout_mode = 1
+
+[node name="CookieMenu" parent="ScreenContainer" instance=ExtResource("11_m4gbq")]
+layout_mode = 1
+
+[node name="SpaghettiMenu" parent="ScreenContainer" instance=ExtResource("12_lag67")]
+layout_mode = 1

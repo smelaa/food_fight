@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbndhbg8hsbd2"]
+
+[ext_resource type="PackedScene" uid="uid://w4hw45cd55j0" path="res://scenes/character_menu.tscn" id="1_yre0n"]
+[ext_resource type="Texture2D" uid="uid://b0w0hoiroa8kg" path="res://assets/bullets/popcorn16.png" id="2_pj80l"]
+[ext_resource type="Texture2D" uid="uid://ctlysbvvhrjbg" path="res://assets/player/unicorn16.png" id="3_tg7v8"]
+
+[node name="UnicornMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharactersMenu" parent="." instance=ExtResource("1_yre0n")]
+layout_mode = 1
+bullet_name = "Popcorn Bullet"
+bullet_texture = ExtResource("2_pj80l")
+enemy_name = "Unicorn"
+enemy_texture = ExtResource("3_tg7v8")

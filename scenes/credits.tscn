@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://nxihxn2lfkny"]
+
+[ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="1_2fbfq"]
+[ext_resource type="Script" uid="uid://dafil5774l4ps" path="res://scripts/credits.gd" id="1_8gwij"]
+[ext_resource type="Theme" uid="uid://b2dakpis71pn" path="res://theme.tres" id="1_mah5v"]
+[ext_resource type="Script" uid="uid://d1so580l3a36l" path="res://scripts/texture_rect.gd" id="2_8gwij"]
+[ext_resource type="Texture2D" uid="uid://fqt4da8nfr25" path="res://assets/menu.png" id="3_mah5v"]
+[ext_resource type="Texture2D" uid="uid://cx2wx7rix0s1l" path="res://assets/icons/home.png" id="4_kyhnv"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_mah5v")
+script = ExtResource("1_8gwij")
+
+[node name="Background_1" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2fbfq")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("2_8gwij")
+
+[node name="Background_2" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1080.0
+offset_right = 1.0
+offset_bottom = -1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2fbfq")
+expand_mode = 1
+stretch_mode = 1
+script = ExtResource("2_8gwij")
+
+[node name="Menu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 73.0
+offset_right = 1744.0
+offset_bottom = 1006.0
+texture = ExtResource("3_mah5v")
+
+[node name="BackToMenuButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 870.0
+offset_right = 182.0
+offset_bottom = 998.0
+texture_normal = ExtResource("4_kyhnv")
+texture_pressed = ExtResource("4_kyhnv")
+texture_hover = ExtResource("4_kyhnv")
+
+[node name="credits" type="Label" parent="."]
+offset_left = 307.0
+offset_top = 448.0
+offset_right = 885.0
+offset_bottom = 653.0
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+offset_left = 443.0
+offset_top = 754.0
+offset_right = 751.0
+offset_bottom = 899.0
+text = "Food 
+Invaders"
+horizontal_alignment = 1
+
+[node name="ola" type="Label" parent="."]
+offset_left = 1194.0
+offset_top = 673.0
+offset_right = 1502.0
+offset_bottom = 818.0
+text = "Ola
+Smela"
+horizontal_alignment = 1
+
+[node name="jacek" type="Label" parent="."]
+offset_left = 1146.0
+offset_top = 279.0
+offset_right = 1531.0
+offset_bottom = 424.0
+text = "Jacek
+Urbanowicz"
+horizontal_alignment = 1
+
+[node name="and" type="Label" parent="."]
+offset_left = 1154.0
+offset_top = 511.0
+offset_right = 1539.0
+offset_bottom = 656.0
+theme_override_colors/font_color = Color(0.670588, 0.133333, 0.0117647, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+text = "and
+"
+horizontal_alignment = 1

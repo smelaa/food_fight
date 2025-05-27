@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr6fxux7130fd"]
+
+[ext_resource type="PackedScene" uid="uid://w4hw45cd55j0" path="res://scenes/character_menu.tscn" id="1_vvls7"]
+[ext_resource type="Texture2D" uid="uid://xkph27p7orjj" path="res://assets/bullets/omlette16.png" id="2_30h7k"]
+[ext_resource type="Texture2D" uid="uid://c1e3jjyalgibc" path="res://assets/player/gnomlette16.png" id="3_j5xjf"]
+
+[node name="GnomletteMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharactersMenu" parent="." instance=ExtResource("1_vvls7")]
+layout_mode = 1
+bullet_name = "Omlette Bullet"
+bullet_texture = ExtResource("2_30h7k")
+enemy_name = "Gnomlette"
+enemy_texture = ExtResource("3_j5xjf")

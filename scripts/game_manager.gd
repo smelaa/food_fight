@@ -14,6 +14,7 @@ var current_score := 0
 @onready var score_label: Label = $ScoreLabel
 
 func _ready():
+	$BackToMenuButton.pressed.connect(_on_BackToMenuButton_pressed)
 	spawn_next_villain()
 
 func spawn_next_villain():
@@ -38,3 +39,6 @@ func _on_villain_defeated():
 	await get_tree().create_timer(2.0).timeout
 	current_index += 1
 	spawn_next_villain()
+	
+func _on_BackToMenuButton_pressed():
+	get_tree().change_scene_to_file("res://scenes/menu.tscn") 

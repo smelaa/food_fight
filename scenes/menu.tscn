@@ -100,18 +100,15 @@ text = "New Game"
 
 [node name="FightersButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-disabled = true
 text = "Fighters"
 
 [node name="EnemiesButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-disabled = true
 text = "Enemies
 "
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-disabled = true
 text = "Credits"
 
 [node name="Label" type="Label" parent="."]
