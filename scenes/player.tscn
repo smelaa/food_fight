@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d1ylkaqxlalkl" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="PackedScene" uid="uid://bvpj2wopegqdn" path="res://scenes/bullets/player_bullet.tscn" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://cbvkghecr05sg" path="res://assets/player_unicorn.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://ctlysbvvhrjbg" path="res://assets/player/unicorn16.png" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
-size = Vector2(137, 82)
+size = Vector2(106, 145)
 
 [node name="Player" type="Node"]
 
@@ -14,17 +14,18 @@ position = Vector2(960, 980)
 script = ExtResource("1_g2els")
 speed = 500
 bullet_scene = ExtResource("2_dqkch")
-shoot_offset = Vector2(0, -40)
+shoot_offset = Vector2(0, -115)
 max_health = 200
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="player"]
-position = Vector2(-9.5, 21)
+position = Vector2(-13, -8.5)
 shape = SubResource("RectangleShape2D_3vyb7")
 debug_color = Color(1, 0.0139816, 0.00405511, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_qhqgy")
+position = Vector2(-9.99998, -12)
+scale = Vector2(0.127441, 0.151367)
+texture = ExtResource("3_qhqgy")
 
 [node name="UnderLifeBar" type="ColorRect" parent="player"]
 offset_left = -80.0

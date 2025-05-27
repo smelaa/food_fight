@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://el3be40egc4c"]
+[gd_scene load_steps=8 format=3 uid="uid://el3be40egc4c"]
 
 [ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://i21slysr047c" path="res://scenes/player.tscn" id="1_o5qli"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://b2dakpis71pn" path="res://theme.tres" id="5_o6xl0"]
 [ext_resource type="Script" uid="uid://b3dxh1w82tnmq" path="res://scripts/game_manager.gd" id="5_tbgi4"]
 [ext_resource type="FontFile" uid="uid://chskgq700cm20" path="res://assets/ARCADECLASSIC.TTF" id="5_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cx2wx7rix0s1l" path="res://assets/icons/home.png" id="7_o6xl0"]
 
 [node name="main" type="Node"]
 
@@ -51,3 +52,13 @@ theme = ExtResource("5_o6xl0")
 theme_override_fonts/font = ExtResource("5_tefeu")
 theme_override_font_sizes/font_size = 50
 text = "Score: 0"
+
+[node name="BackToMenuButton" type="TextureButton" parent="GameManager"]
+offset_left = 1862.0
+offset_top = 1018.0
+offset_right = 1990.0
+offset_bottom = 1146.0
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("7_o6xl0")
+texture_pressed = ExtResource("7_o6xl0")
+texture_hover = ExtResource("7_o6xl0")

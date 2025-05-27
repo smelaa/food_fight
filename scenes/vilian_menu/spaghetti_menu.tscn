@@ -1,0 +1,152 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvk1u70gh5uwk"]
+
+[ext_resource type="Theme" uid="uid://b2dakpis71pn" path="res://theme.tres" id="1_8woy1"]
+[ext_resource type="Texture2D" uid="uid://fqt4da8nfr25" path="res://assets/menu.png" id="2_uw2fm"]
+[ext_resource type="Texture2D" uid="uid://dfxceni3h0mv" path="res://assets/bullets/meatball.png" id="2_yaad2"]
+[ext_resource type="Texture2D" uid="uid://bec63quxrg2f" path="res://assets/villains/spaghetti.png" id="3_8woy1"]
+[ext_resource type="Texture2D" uid="uid://b5d0qplsfessu" path="res://assets/bullets/meatball_fire.png" id="5_k8n0o"]
+
+[node name="SpaghettiMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_8woy1")
+
+[node name="Menu" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 73.0
+offset_right = 1737.0
+offset_bottom = 1006.0
+texture = ExtResource("2_uw2fm")
+
+[node name="EnemyImg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 242.0
+offset_right = 1374.0
+offset_bottom = 1266.0
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_8woy1")
+expand_mode = 1
+
+[node name="EnemyName" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 699.0
+offset_right = 864.0
+offset_bottom = 906.0
+theme_override_font_sizes/normal_font_size = 100
+text = "SPAGHETTI"
+horizontal_alignment = 1
+
+[node name="BulletImg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 167.0
+offset_right = 1306.0
+offset_bottom = 423.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yaad2")
+expand_mode = 1
+
+[node name="BulletImg2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1054.0
+offset_top = 313.0
+offset_right = 1310.0
+offset_bottom = 569.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_k8n0o")
+expand_mode = 1
+
+[node name="BulletName" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 1199.0
+offset_top = 223.0
+offset_right = 1611.0
+offset_bottom = 436.0
+text = "explosive
+Meatball
+bullet"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 463.0
+offset_right = 1587.0
+offset_bottom = 805.0
+theme_override_constants/separation = 70
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Strength" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "strength"
+
+[node name="Speed" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "speed"
+
+[node name="BulletDemage" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "bullet demage"
+
+[node name="BulletSpeed" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "bullet speed"
+
+[node name="ExplosionProb" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Explosion
+probability"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="StrengthNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "10"
+
+[node name="SpeedNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "10"
+
+[node name="BulletDemageNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "10"
+
+[node name="BulletSpeedNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "10"
+
+[node name="ExplosionProbNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "30%"
+
+[node name="ExplosionProb2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 1062.0
+offset_top = 852.0
+offset_right = 1633.0
+offset_bottom = 901.0
+theme_override_font_sizes/font_size = 40
+text = "Exploded Meatball is Deadly!"
