@@ -28,7 +28,7 @@ func start_next_wave():
 	current_wave_size = randi_range(3, 7)  # You can adjust the range
 	villains_remaining = current_wave_size
 
-	for i in current_wave_size:
+	for i in range(current_wave_size):
 		spawn_villain()
 
 func spawn_villain():
