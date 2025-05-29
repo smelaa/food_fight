@@ -18,7 +18,6 @@ var villains_remaining := 0
 @onready var score_label: Label = $ScoreLabel
 
 func _ready():
-	print(player.get_script()) 
 	player.game_manager = self
 	randomize()
 	$BackToMenuButton.pressed.connect(_on_BackToMenuButton_pressed)
