@@ -1,7 +1,9 @@
 extends "res://scripts/character.gd"
 
-@export var shoot_interval = 0.2 
+@export var shoot_interval = 0.2
+@export var game_manager: Node
 var shoot_timer := 0.0
+
 
 func _physics_process(delta: float) -> void:
 	var input = Input.get_axis("player_left", "player_right")
@@ -26,6 +28,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("player_shoot") and shoot_timer <= 0:
 		shoot_bullet()
 		shoot_timer = shoot_interval
+
+
+func die():
+	GameState.final_score = game_manager.current_score
+	get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 
 #func _unhandled_input(event):
 	#if event.is_action_pressed("player_shoot"):
