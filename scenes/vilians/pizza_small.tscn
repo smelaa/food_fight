@@ -11,11 +11,13 @@ height = 130.0
 [node name="pizza_small" type="Area2D"]
 position = Vector2(960, -250)
 script = ExtResource("1_kaahb")
-speed = 500
+speed = 300
 bullet_scene = ExtResource("2_jy1d5")
 shoot_offset = Vector2(0, 210)
-max_health = 70
+max_health = 400
 direction = Vector2(-1, 0)
+bullet_speed = 600
+bullet_power = 35
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3, 130)

@@ -14,6 +14,10 @@ grow_vertical = 2
 
 [node name="CharactersMenu" parent="." instance=ExtResource("5_cuj2r")]
 layout_mode = 1
+strength = "★★★"
+speed = "★"
+bullet_demage = "★★★"
+bullet_speed = "★★"
 bullet_name = "Choco Cube Bullet"
 bullet_texture = ExtResource("2_qpl2s")
 enemy_name = "Choco Cookie"

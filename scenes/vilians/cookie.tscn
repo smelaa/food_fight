@@ -10,13 +10,12 @@ radius = 102.078
 [node name="cookie" type="Area2D"]
 position = Vector2(960, -250)
 script = ExtResource("1_26nby")
-speed = 350
+speed = 300
 bullet_scene = ExtResource("2_26nby")
 shoot_offset = Vector2(0, 270)
-max_health = 200
+max_health = 400
 direction = Vector2(-1, 0)
-bullet_speed = 700
-bullet_power = 30
+bullet_power = 50
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(5, 150)

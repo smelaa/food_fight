@@ -14,6 +14,10 @@ grow_vertical = 2
 
 [node name="CharactersMenu" parent="." instance=ExtResource("1_5ebip")]
 layout_mode = 1
+strength = "★★"
+speed = "★★"
+bullet_demage = "★★"
+bullet_speed = "★★"
 bullet_name = "Bread crumb bullet"
 bullet_texture = ExtResource("2_852c3")
 enemy_name = "Tosted bread"

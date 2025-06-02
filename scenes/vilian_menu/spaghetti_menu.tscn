@@ -119,23 +119,23 @@ theme_override_constants/separation = 15
 
 [node name="StrengthNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "10"
+theme_override_font_sizes/font_size = 35
+text = "★★"
 
 [node name="SpeedNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "10"
+theme_override_font_sizes/font_size = 35
+text = "★★"
 
 [node name="BulletDemageNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "10"
+theme_override_font_sizes/font_size = 35
+text = "★★★★"
 
 [node name="BulletSpeedNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "10"
+theme_override_font_sizes/font_size = 35
+text = "★★"
 
 [node name="ExplosionProbNum" type="Label" parent="HBoxContainer/VBoxContainer2"]
 layout_mode = 2
