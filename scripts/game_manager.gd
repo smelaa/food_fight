@@ -12,13 +12,16 @@ var villain_types: Array[PackedScene] = [
 var current_score := 0
 var current_wave_size := 0
 var villains_remaining := 0
-
-@onready var player = $Player/player
+var player_node
+var player_body
 
 @onready var score_label: Label = $ScoreLabel
 
 func _ready():
-	player.game_manager = self
+	player_node = GameState.selected_character.instantiate()
+	add_child(player_node)
+	player_body = player_node.get_node("player")
+	player_body.game_manager = self
 	randomize()
 	$BackToMenuButton.pressed.connect(_on_BackToMenuButton_pressed)
 	start_next_wave()

@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://i21slysr047c"]
+
+[ext_resource type="Script" uid="uid://d1ylkaqxlalkl" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://bvpj2wopegqdn" path="res://scenes/bullets/popcorn_bullet.tscn" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://ctlysbvvhrjbg" path="res://assets/player/unicorn16.png" id="3_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
+size = Vector2(106, 145)
+
+[node name="Unicorn" type="Node"]
+
+[node name="player" type="Area2D" parent="."]
+position = Vector2(960, 980)
+script = ExtResource("1_g2els")
+speed = 650
+bullet_scene = ExtResource("2_dqkch")
+shoot_offset = Vector2(0, -115)
+max_health = 200
+bullet_speed = 600
+
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="player"]
+position = Vector2(-13, -8.5)
+shape = SubResource("RectangleShape2D_3vyb7")
+debug_color = Color(1, 0.0139816, 0.00405511, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(-9.99998, -12)
+scale = Vector2(0.127441, 0.151367)
+texture = ExtResource("3_qhqgy")
+
+[node name="UnderLifeBar" type="ColorRect" parent="player"]
+offset_left = -80.0
+offset_top = 76.0
+offset_right = 60.0
+offset_bottom = 84.0
+color = Color(0.836725, 0.178168, 0.540508, 1)
+
+[node name="LifeBar" type="ColorRect" parent="player"]
+offset_left = -80.0
+offset_top = 76.0
+offset_right = 60.0
+offset_bottom = 84.0
+color = Color(0.457461, 0.794288, 0.183409, 1)

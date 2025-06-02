@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://3mas706ggvvg"]
+
+[ext_resource type="Script" uid="uid://dmnsww3o7qsqr" path="res://scripts/bullet.gd" id="1_f7mip"]
+[ext_resource type="Texture2D" uid="uid://w3w8i554s7g8" path="res://assets/bullets/sprinkles16.png" id="2_5epmt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vae2g"]
+radius = 16.0312
+
+[node name="SprinklesBullet" type="Area2D"]
+script = ExtResource("1_f7mip")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.129395, 0.125977)
+texture = ExtResource("2_5epmt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vae2g")

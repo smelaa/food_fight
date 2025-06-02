@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dr6fxux7130fd"]
+[gd_scene load_steps=7 format=3 uid="uid://dr6fxux7130fd"]
 
+[ext_resource type="Theme" uid="uid://b2dakpis71pn" path="res://theme.tres" id="1_1pdt7"]
 [ext_resource type="PackedScene" uid="uid://w4hw45cd55j0" path="res://scenes/character_menu.tscn" id="1_vvls7"]
 [ext_resource type="Texture2D" uid="uid://xkph27p7orjj" path="res://assets/bullets/omlette16.png" id="2_30h7k"]
 [ext_resource type="Texture2D" uid="uid://c1e3jjyalgibc" path="res://assets/player/gnomlette16.png" id="3_j5xjf"]
+[ext_resource type="Script" uid="uid://bvnubnwy7l32m" path="res://scripts/select_character_button.gd" id="5_2moqa"]
+[ext_resource type="PackedScene" uid="uid://c41bt6r482uej" path="res://scenes/player_characters/gnomlette.tscn" id="6_1pdt7"]
 
 [node name="GnomletteMenu" type="Control"]
 layout_mode = 3
@@ -11,10 +14,25 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_1pdt7")
 
 [node name="CharactersMenu" parent="." instance=ExtResource("1_vvls7")]
 layout_mode = 1
+strength = "★★"
+speed = "★★"
+bullet_demage = "★★"
+bullet_speed = "★★"
 bullet_name = "Omlette Bullet"
 bullet_texture = ExtResource("2_30h7k")
 enemy_name = "Gnomlette"
 enemy_texture = ExtResource("3_j5xjf")
+
+[node name="SelectButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 842.0
+offset_right = 795.0
+offset_bottom = 913.0
+text = "Select"
+script = ExtResource("5_2moqa")
+character = ExtResource("6_1pdt7")

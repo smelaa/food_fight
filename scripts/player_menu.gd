@@ -21,6 +21,7 @@ func _ready():
 func _show_screen(index):
 	for i in range(screens.size()):
 		screens[i].visible = (i == index)
+	screens[index].get_node("SelectButton").enable_not_selected()
 
 func _on_PreviousButton_pressed():
 	$NextButton.disabled = false

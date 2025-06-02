@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://n5ccnus0t3qj"]
+[gd_scene load_steps=5 format=3 uid="uid://dke6rm7jfbjgh"]
 
 [ext_resource type="Texture2D" uid="uid://dojcsuioyhvbr" path="res://assets/backgorund.png" id="1_wa2qn"]
 [ext_resource type="Script" uid="uid://d1so580l3a36l" path="res://scripts/texture_rect.gd" id="2_cyfkl"]
 [ext_resource type="FontFile" uid="uid://chskgq700cm20" path="res://assets/ARCADECLASSIC.TTF" id="3_xx0b3"]
-[ext_resource type="Script" uid="uid://c1dbl703j27jl" path="res://scripts/game_over_screen.gd" id="4_5i0af"]
+[ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="4_5i0af"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

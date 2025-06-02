@@ -1,31 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://i21slysr047c"]
+[gd_scene load_steps=5 format=3 uid="uid://c41bt6r482uej"]
 
-[ext_resource type="Script" uid="uid://d1ylkaqxlalkl" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="PackedScene" uid="uid://bvpj2wopegqdn" path="res://scenes/bullets/player_bullet.tscn" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://ctlysbvvhrjbg" path="res://assets/player/unicorn16.png" id="3_qhqgy"]
+[ext_resource type="Script" uid="uid://d1ylkaqxlalkl" path="res://scripts/player.gd" id="1_1h22c"]
+[ext_resource type="PackedScene" uid="uid://d10rkwdgj7n48" path="res://scenes/bullets/omlette_bullet.tscn" id="2_1h22c"]
+[ext_resource type="Texture2D" uid="uid://c1e3jjyalgibc" path="res://assets/player/gnomlette16.png" id="3_1h22c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
-size = Vector2(106, 145)
+size = Vector2(103, 130)
 
-[node name="Player" type="Node"]
+[node name="Gnomlette" type="Node"]
 
 [node name="player" type="Area2D" parent="."]
 position = Vector2(960, 980)
-script = ExtResource("1_g2els")
+script = ExtResource("1_1h22c")
 speed = 500
-bullet_scene = ExtResource("2_dqkch")
+bullet_scene = ExtResource("2_1h22c")
 shoot_offset = Vector2(0, -115)
-max_health = 200
+max_health = 300
+bullet_speed = 400
+bullet_power = 30
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="player"]
-position = Vector2(-13, -8.5)
+position = Vector2(-7.5, -1)
 shape = SubResource("RectangleShape2D_3vyb7")
 debug_color = Color(1, 0.0139816, 0.00405511, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 position = Vector2(-9.99998, -12)
 scale = Vector2(0.127441, 0.151367)
-texture = ExtResource("3_qhqgy")
+texture = ExtResource("3_1h22c")
 
 [node name="UnderLifeBar" type="ColorRect" parent="player"]
 offset_left = -80.0
