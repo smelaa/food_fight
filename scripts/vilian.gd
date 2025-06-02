@@ -39,6 +39,17 @@ func _on_shoot_timer_timeout() -> void:
 		shoot_bullet()
 		timeout=0
 		
+func take_damage(amount: int):
+	if not spawned:
+		return
+		
+	current_health = max(0, current_health - amount)
+	update_life_bar()
+	if current_health == 0:
+		emit_signal("defeated")
+		die()
+		queue_free()
+
 func die():
 	if game_manager:
 		game_manager.increase_score(100)

@@ -38,10 +38,10 @@ expand_mode = 1
 stretch_mode = 1
 script = ExtResource("2_jyhfs")
 
-[node name="Player" parent="." instance=ExtResource("1_o5qli")]
-
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource("5_tbgi4")
+
+[node name="Player" parent="GameManager" instance=ExtResource("1_o5qli")]
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
 offset_left = 11.0
